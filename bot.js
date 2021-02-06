@@ -25,7 +25,7 @@ Markap.keyboard([
 );
 
 bot.help((ctx) => ctx.reply(COUNTRIES_LIST));
-bot.hears('tips', (ctx) => ctx.reply(img));
+bot.hears('tips', (ctx) => ctx.replyWithPhoto(img));
 bot.on('sticker', (ctx) => ctx.reply('👍'));
 
 bot.on('text', async (ctx) => {
@@ -40,7 +40,7 @@ bot.on('text', async (ctx) => {
   `;
   ctx.reply(formatData);
   } catch {
-    ctx.reply('Название страны написано не коректоб посмотрите команду /help');
+    ctx.reply('Название страны написано не коректно, посмотрите команду /help');
   }
 });
 
